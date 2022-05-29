@@ -1,0 +1,68 @@
+message.channel.send().then(msg => {
+            msg.delete({ timeout: 10000 })
+          })
+message.author.username
+📗
+📗┃logs-bot
+
+const logsEmbed = new Discord.MessageEmbed()
+            setTitle("Kick")
+            .setDescription(`<@${memberTarget.user.id}> à été kick par <@${authorMsg.user.id}!`)
+            .setColor('#1F136B')
+            .setFooter("Dev by Kama")
+            client.channels.cache.get(`978086113665249380`).send(logsEmbed)
+
+            const authorMsg = message.guild.members.cache.get(author.id);
+
+
+
+let member = message.mentions.members.first();
+if(!member) message.reply("Please mention a valid member of this server") return;
+if(!member.kickable) message.reply("This member is not kickable") return;
+// Now check if the user has the Kick Members Permission
+if(!member.hasPermission('KICK_MEMBERS') {
+   message.reply("You Can't kick anyone");
+	return;
+} else {
+ // Now If they do kick the user
+  member.kick();
+}
+// If this works please upvote!
+
+
+
+const target = message.mentions.users.first();
+        if(target){
+            const memberTarget = message.guild.members.cache.get(target.id);
+            memberTarget.kick();
+            const kickEmbed = new Discord.MesssageEmbed()
+                .setTitle("Kick")
+                .setDescription(`<@${memberTarget.user.id}> à bien été kick !`)
+                .setColor('#1F136B')
+            message.channel.send(kickEmbed).then(msg => {
+                msg.delete({ timeout: 10000 })
+              })
+        }else{
+            message.channel.send("Vous n'avez pas pu kick ce membre !").then(msg => {
+                msg.delete({ timeout: 10000 })
+              })
+        }}else{
+            message.reply("Vous n'avez pas les permissions nécéssaires !").then(msg => {
+                msg.delete({ timeout: 10000 })
+              })"
+        }
+
+
+
+const userId = message.guild.members.find(m => m.id === "851028619337007134");
+        if (message.author === userId) {
+            const yaourtEmbed = new Discord.MessageEmbed()
+                .setFooter('Dev by Kama#4725')
+                .setTitle("Yaourt is sus")
+                .setImage("https://i.imgur.com/U1TEVjF.jpeg")
+            message.author.send(yaourtEmbed)
+        } else {
+
+if ( message.guild.id === 'SOME GUILD ID') {
+
+client.ticketCategory = client.channels.cache.find(c => c.name == "Tickets" && c.type == "category")
