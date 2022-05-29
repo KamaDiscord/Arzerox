@@ -1,4 +1,4 @@
-"# Arzerox" 
+# Arzerox
 
 
 My very cool bot!
