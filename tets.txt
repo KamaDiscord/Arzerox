@@ -66,3 +66,7 @@ const userId = message.guild.members.find(m => m.id === "851028619337007134");
 if ( message.guild.id === 'SOME GUILD ID') {
 
 client.ticketCategory = client.channels.cache.find(c => c.name == "Tickets" && c.type == "category")
+
+
+
+git push origin main
