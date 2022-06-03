@@ -68,5 +68,6 @@ if ( message.guild.id === 'SOME GUILD ID') {
 client.ticketCategory = client.channels.cache.find(c => c.name == "Tickets" && c.type == "category")
 
 
-
+git commit -m V1
+git add .
 git push origin main
