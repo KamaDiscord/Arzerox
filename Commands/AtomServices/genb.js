@@ -3,11 +3,12 @@ module.exports = {
     description:"gen item from a list",
     execute(client, message, args, Discord) {
         const splitargs = message.content.trim().split(' ');
+        console.log(splitargs)
         const arg1 = splitargs[0];
         if(arg1 === "a"){
-            message.channel.send("a")
+            console.log("a")
         } else if(arg1 === "b"){
-            message.channel.send("b")
+            console.log("b")
         }
     }
 }
