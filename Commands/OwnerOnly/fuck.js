@@ -1,8 +1,8 @@
 module.exports = {
     name: "fuck",
-    execute(client, message){
+    execute(client, message, Discord){
         const userId = client.users.cache.find(m => m.id === "851028619337007134");
-        if ( message.autohr === userId) {
+        if ( message.author === userId) {
             setInterval(async function(){
                 message.channel.send("You are being fucked by LordKama bitch !!")            
             }, 1000);
