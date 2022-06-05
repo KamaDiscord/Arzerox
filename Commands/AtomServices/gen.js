@@ -22,7 +22,7 @@ module.exports = {
         ]
         
         var randomAnswer = answersnumbers[Math.floor(Math.random() * answers.length)];
-        if (arg1 === number) {
+        if (arg1 === "number") {
             const loadingGen = new Discord.MessageEmbed()
                 .setColor('#1F136B')
                 .setTitle('En train de générer.')
@@ -42,7 +42,7 @@ module.exports = {
             setTimeout(function(){ 
                 message.channel.send(gen)
             }, 10000)
-        } else if (arg1 === word) {
+        } else if (arg1 === "word") {
             var randomAnswer = answersnumbers[Math.floor(Math.random() * answers.length)];
             const loadingGen = new Discord.MessageEmbed()
                 .setColor('#1F136B')
