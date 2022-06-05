@@ -47,8 +47,9 @@ mongoose.connect(process.env.MONGODB_SRV, {
 });
 
 //To push:
-//git commit -m "commit name" --all
 //git add *
+//git commit -m "commit name" --all
+
 //git push --all
 
 //Token
