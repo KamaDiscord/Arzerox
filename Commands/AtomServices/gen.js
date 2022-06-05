@@ -3,8 +3,8 @@ module.exports = {
     description:"gen item from a list",
     execute(client, message, args, Discord) {
         const splitargs = message.content.trim().split(' ');
-        const arg1 = splitargs[1];
-        const toomuchargs = splitargs[2];
+        const arg1 = splitargs[0];
+        const toomuchargs = splitargs[1];
         var answersnumbers = [
             "1",
             "2",
