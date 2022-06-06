@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 
-client.user.setPresence("+help • Dev by Kama#4725", { type: "WATCHING", url: "https://twitch.tv/lordkama_fr" })
+bot.user.setPresence("+help • Dev by Kama#4725", { type: "WATCHING", url: "https://twitch.tv/lordkama_fr" })
 
 ['command_handler', 'event_handler'].forEach(handler =>{
     require(`./handlers/${handler}`)(client, Discord);
