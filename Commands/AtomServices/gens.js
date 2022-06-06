@@ -25,7 +25,7 @@ module.exports = {
                 };
                 
                 // File path to find the given service
-                const filePath = `${__dirname}/../stock/${args[0]}.txt`;
+                const filePath = `../stock/${args[0]}.txt`;
 
                 // Read the service file
                 fs.readFile(filePath, function (error, data) {
