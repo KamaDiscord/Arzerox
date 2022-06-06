@@ -1,5 +1,6 @@
 // Dependencies
 const CatLoggr = require('cat-loggr');
+const fs = require('fs');
 
 // Functions
 const log = new CatLoggr();
