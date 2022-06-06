@@ -3,7 +3,7 @@ module.exports = {
     description:"gen item from a list",
     execute(client, message, args, Discord) {
         const splitargs = message.content.trim().split(' ');
-        console.log(message)
+        console.log(message.content)
         const arg1 = splitargs[1];
         if(arg1 === "a"){
             console.log("a")
