@@ -8,7 +8,7 @@ const generated = new Set();
 module.exports = {
 	name: 'gen', // Command name
 	description: 'Generate a specified service if stocked.', // Command description
-	execute(message, args) {
+	execute(client, message, args, Discord) {
                 // Parameters
                 const service = args[0];
                 // If the "service" parameter is missing
