@@ -2,6 +2,7 @@ module.exports = {
     name:"gens",
     description:"gen item from a list",
     execute(client, message, args, Discord) {
+        args = global.args
         const splitargs = message.content.trim().split(' ');
         console.log(message.content + args)
         const arg1 = splitargs[1];
