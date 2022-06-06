@@ -1,5 +1,5 @@
 module.exports = {
-    name:"gen a",
+    name:"gena",
     description:"gen item from a list",
     execute(client, message, args, Discord) {
         const splitargs = message.content.trim().split(' ');

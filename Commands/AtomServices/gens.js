@@ -8,27 +8,9 @@ const generated = new Set();
 module.exports = {
 	name: 'gen', // Command name
 	description: 'Generate a specified service if stocked.', // Command description
-    /**
-     * Command exetute
-     * @param {Message} message The message sent by user
-     * @param {Array[]} args Arguments splitted by spaces after the command name
-     */
 	execute(message, args) {
-        // If the generator channel is not given in config or invalid
-        if (message.channel.id === "977916010692763668") {
-            // If the user have cooldown on the command
-            if (generated.has(message.author.id)) {
-                    const test = new Discord.MessageEmbed()
-                    .setColor(0x57F287)
-                    .setTitle('Cooldown!')
-                    .setDescription('Please wait before executing that command again!')
-                    .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
-                    .setTimestamp()
-                    message.channel.send(test)
-            } else {
                 // Parameters
                 const service = args[0];
-
                 // If the "service" parameter is missing
                 if (!service) {
                     return message.channel.send(
@@ -124,17 +106,5 @@ module.exports = {
                         );
                     };
                 });
-            };
-        } else {
-            // If the command executed in another channel
-            message.channel.send(
-                new MessageEmbed()
-                .setColor(0x57F287)
-                .setTitle('Wrong command usage!')
-                .setDescription(`You cannot use the \`gen\` command in this channel! Try it in <#${config.genChannel}>!`)
-                .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
-                .setTimestamp()
-            );
-        };
 	}
 };
