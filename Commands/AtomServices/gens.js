@@ -14,7 +14,7 @@ module.exports = {
                 // If the "service" parameter is missing
                 if (!service) {
                     return message.channel.send(
-                        new MessageEmbed()
+                        new Discord.MessageEmbed()
                         .setColor(0x57F287)
                         .setTitle('Missing parameters!')
                         .setDescription('You need to give a service name!')
@@ -38,7 +38,7 @@ module.exports = {
                         // If the service file is empty
                         if (position === -1) {
                             return message.channel.send(
-                                new MessageEmbed()
+                                new Discord.MessageEmbed()
                                 .setColor(0x57F287)
                                 .setTitle('Generator error!')
                                 .setDescription(`I do not find the \`${args[0]}\` service in my stock!`)
@@ -49,7 +49,7 @@ module.exports = {
 
                         // Send messages to the user
                         message.channel.send(
-                            new MessageEmbed()
+                            new Discord.MessageEmbed()
                             .setColor(0x57F287)
                             .setTitle('Generated account')
                             .addField('Service', `\`\`\`${args[0][0].toUpperCase()}${args[0].slice(1).toLowerCase()}\`\`\``, true)
@@ -66,7 +66,7 @@ module.exports = {
                             // Write changes
                             fs.writeFile(filePath, data, function (error) {
                                 message.channel.send(
-                                    new MessageEmbed()
+                                    new Discord.MessageEmbed()
                                     .setColor(0x57F287)
                                     .setTitle('Account generated seccessfully!')
                                     .setDescription(`Check your private ${message.author}! *If you do not recieved the message, please unlock your private!*`)
@@ -86,7 +86,7 @@ module.exports = {
                         } else {
                             // If the service is empty
                             return message.channel.send(
-                                new MessageEmbed()
+                                new Discord.MessageEmbed()
                                 .setColor(0x57F287)
                                 .setTitle('Generator error!')
                                 .setDescription(`The \`${args[0]}\` service is empty!`)
@@ -97,7 +97,7 @@ module.exports = {
                     } else {
                         // If the service does not exists
                         return message.channel.send(
-                            new MessageEmbed()
+                            new Discord.MessageEmbed()
                             .setColor(0x57F287)
                             .setTitle('Generator error!')
                             .setDescription(`Service \`${args[0]}\` does not exist!`)
