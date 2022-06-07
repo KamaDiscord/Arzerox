@@ -11,14 +11,6 @@ client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 client.userSettings = new Collection();
 
-//Premium
-const users = User.find();
-  for (let user of users) {
-    client.userSettings.set(user.Id, user);
-  }
-
-  require('../handlers/premium')(client)
-
 
 ['command_handler', 'event_handler'].forEach(handler =>{
     require(`./handlers/${handler}`)(client, Discord);
