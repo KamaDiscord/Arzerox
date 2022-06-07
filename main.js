@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 require('dotenv').config();
 const client = new Discord.Client();
-client.userSettings = new Collection();
+client.userSettings = new Discord.Collection();
 const mongoose = require('mongoose');
 const CatLoggr = require('cat-loggr');
 const log = new CatLoggr();
