@@ -4,7 +4,6 @@ const client = new Discord.Client();
 const mongoose = require('mongoose');
 const CatLoggr = require('cat-loggr');
 const log = new CatLoggr();
-const User = require("../models/User");
 
 //Client dependecies
 client.commands = new Discord.Collection();
