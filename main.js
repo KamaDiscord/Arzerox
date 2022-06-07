@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 require('dotenv').config();
 const client = new Discord.Client();
+client.userSettings = new Collection();
 const mongoose = require('mongoose');
 const CatLoggr = require('cat-loggr');
 const log = new CatLoggr();
@@ -51,9 +52,8 @@ mongoose.connect(process.env.MONGODB_SRV, {
 
 //To push:
 //git add *
-//git commit -m "commit name" --all
-
-//git push --all
+//git commit -m "commit name"
+//git push origin main
 
 //Token
 client.login(process.env.DISCORD_TOKEN);

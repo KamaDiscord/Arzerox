@@ -26,7 +26,7 @@ module.exports = new Command({
       });
     interaction.followUp({
       embeds: [
-        new Discord.MessageEmbed().setDescription(
+        new MessageEmbed().setDescription(
           data.join("\n") || "No Premium User Found"
         ),
       ],

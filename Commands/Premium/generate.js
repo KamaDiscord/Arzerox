@@ -1,11 +1,13 @@
 const { Command } = require("reconlx");
+const ee = require("../../settings/embed.json");
+const config = require("../../settings/config.json");
 const moment = require("moment");
 const voucher_codes = require("voucher-code-generator");
-const schema = require("../../Models/code.js");
+const schema = require("../../Models/code");
 
 module.exports = new Command({
   // options
-  name: "genpremium",
+  name: "gencode",
   description: `gen premium codes`,
   userPermissions: [],
   category: "Premium",

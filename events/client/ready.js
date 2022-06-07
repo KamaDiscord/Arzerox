@@ -1,5 +1,5 @@
 const client = require("..");
-const User = require("../Models/User");
+const User = require("../../Models/User");
 
 client.on("ready", async () => {
   console.log(`${client.user.username} Is Online`);
