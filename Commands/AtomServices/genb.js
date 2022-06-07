@@ -1,5 +1,5 @@
 module.exports = {
-    name:"gens",
+    name:"gens ",
     description:"gen item from a list",
         /**
      * @param {Array[]} args Arguments splitted by spaces after the command name
