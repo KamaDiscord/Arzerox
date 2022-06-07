@@ -4,9 +4,20 @@ const client = new Discord.Client();
 const mongoose = require('mongoose');
 const CatLoggr = require('cat-loggr');
 const log = new CatLoggr();
+const User = require("../models/User");
 
+//Client dependecies
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
+client.userSettings = new Collection();
+
+//Premium
+const users = await User.find();
+  for (let user of users) {
+    client.userSettings.set(user.Id, user);
+  }
+
+  require('../handlers/premium')(client)
 
 
 ['command_handler', 'event_handler'].forEach(handler =>{
