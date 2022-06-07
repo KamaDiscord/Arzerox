@@ -4,11 +4,8 @@ module.exports = {
     execute(client, message, args, Discord) {
         const splitargs = message.content.trim().split(' ');
         console.log(args[0])
-        const arg1 = splitargs[1];
-        if(arg1 === "a"){
-            console.log("a")
-        } else if(arg1 === "b"){
-            console.log("b")
-        }
+        const service = args[0]
+        console.log(service);
+        message.channel.send(`Looking for \`${args[0]}\`.`)
     }
 }
