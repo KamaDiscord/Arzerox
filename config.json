@@ -1,0 +1,10 @@
+{
+    "genChannel": "977916010692763668",
+    "genCooldown": "1000",
+    "color": {
+        "green": "0x57F287",
+        "yellow": "0xFEE75C",
+        "red": "0xED4245",
+        "default": "0x5865F2"
+    }
+}

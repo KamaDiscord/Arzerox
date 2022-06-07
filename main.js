@@ -2,11 +2,14 @@ const Discord = require('discord.js');
 require('dotenv').config();
 const client = new Discord.Client();
 const mongoose = require('mongoose');
+const config = require('./config.json');
+const CatLoggr = require('cat-loggr');
+const log = new CatLoggr();
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 
-client.user.setPresence("+help • Dev by Kama#4725", { type: "WATCHING", url: "https://twitch.tv/lordkama_fr" })
+client.user.setActivity("+help • Dev by Kama#4725", { type: "WATCHING", url: "https://twitch.tv/lordkama_fr" })
 
 ['command_handler', 'event_handler'].forEach(handler =>{
     require(`./handlers/${handler}`)(client, Discord);
