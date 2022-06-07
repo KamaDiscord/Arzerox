@@ -1,7 +1,6 @@
 // Dependencies
 const { MessageEmbed, Message } = require('discord.js');
 const fs = require('fs');
-const config = require('../config.json');
 
 module.exports = {
 	name: 'stock', // Command name
@@ -27,7 +26,7 @@ module.exports = {
             });
 
             const embed = new MessageEmbed()
-            .setColor(config.color.default)
+            .setColor("0x57F287")
             .setTitle(`${message.guild.name} has **${stock.length} services**`)
             .setDescription('')
 

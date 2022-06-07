@@ -2,7 +2,6 @@
 const { MessageEmbed, Message } = require('discord.js');
 const fs = require('fs');
 const os = require('os');
-const config = require('../config.json');
 const CatLoggr = require('cat-loggr');
 
 // Functions
@@ -26,10 +25,10 @@ module.exports = {
         if (!service) {
             return message.channel.send(
                 new MessageEmbed()
-                .setColor(config.color.red)
+                .setColor("0x57F287")
                 .setTitle('Missing parameters!')
                 .setDescription('You need to specify a service!')
-                .addField('For example', `${config.prefix}${this.name} **tree** apple`)
+                .addField('For example', `+ **tree** apple`)
                 .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
                 .setTimestamp()
             );
@@ -40,10 +39,10 @@ module.exports = {
         if (!account) {
             return message.channel.send(
                 new MessageEmbed()
-                .setColor(config.color.red)
+                .setColor("0x57F287")
                 .setTitle('Missing parameters!')
                 .setDescription('You need to specify an account!')
-                .addField('For example', `${config.prefix}${this.name} tree **apple**`)
+                .addField('For example', `+tree **apple**`)
                 .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
                 .setTimestamp()
             );            
@@ -57,7 +56,7 @@ module.exports = {
 
             message.channel.send(
                 new MessageEmbed()
-                .setColor(config.color.green)
+                .setColor("0x57F287")
                 .setTitle('Account added!')
                 .setDescription(`Successfuly added \`${args[1]}\` account to \`${args[0]}\` service!`)
                 .setFooter(message.author.tag, message.author.displayAvatarURL())

@@ -1,7 +1,6 @@
 // Dependencies
 const { MessageEmbed, Message } = require('discord.js');
 const fs = require('fs');
-const config = require('../config.json');
 const CatLoggr = require('cat-loggr');
 
 // Functions
@@ -20,30 +19,19 @@ module.exports = {
 	execute(message, args) {
         // If the generator channel is not given in config or invalid
         try {
-            message.client.channels.cache.get(config.genChannel).id; // Try to get the channel's id
+            message.client.channels.cache.get("977916010692763668").id; // Try to get the channel's id
         } catch (error) {
             if (error) log.error(error); // If an error occured log to console
 
-            // Send error messsage if the "error_message" field is "true" in the configuration
-            if (config.command.error_message === true) {
-                return message.channel.send(
-                    new MessageEmbed()
-                    .setColor(config.color.red)
-                    .setTitle('Error occured!')
-                    .setDescription('Not a valid gen channel specified!')
-                    .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
-                    .setTimestamp()
-                );
-            } else return;
         };
 
         // If the message channel id is the generator channel id in configuration
-        if (message.channel.id === config.genChannel) {
+        if (message.channel.id === "977916010692763668") {
             // If the user have cooldown on the command
             if (generated.has(message.author.id)) {
                 return message.channel.send(
                     new MessageEmbed()
-                    .setColor(config.color.red)
+                    .setColor("0x57F287")
                     .setTitle('Cooldown!')
                     .setDescription('Please wait before executing that command again!')
                     .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
@@ -57,7 +45,7 @@ module.exports = {
                 if (!service) {
                     return message.channel.send(
                         new MessageEmbed()
-                        .setColor(config.color.red)
+                        .setColor("0x57F287")
                         .setTitle('Missing parameters!')
                         .setDescription('You need to give a service name!')
                         .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
@@ -81,7 +69,7 @@ module.exports = {
                         if (position === -1) {
                             return message.channel.send(
                                 new MessageEmbed()
-                                .setColor(config.color.red)
+                                .setColor("0x57F287")
                                 .setTitle('Generator error!')
                                 .setDescription(`I do not find the \`${args[0]}\` service in my stock!`)
                                 .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
@@ -92,7 +80,7 @@ module.exports = {
                         // Send messages to the user
                         message.author.send(
                             new MessageEmbed()
-                            .setColor(config.color.green)
+                            .setColor("0x57F287")
                             .setTitle('Generated account')
                             .addField('Service', `\`\`\`${args[0][0].toUpperCase()}${args[0].slice(1).toLowerCase()}\`\`\``, true)
                             .addField('Account', `\`\`\`${firstLine}\`\`\``, true)
@@ -109,7 +97,7 @@ module.exports = {
                             fs.writeFile(filePath, data, function (error) {
                                 message.channel.send(
                                     new MessageEmbed()
-                                    .setColor(config.color.green)
+                                    .setColor("0x57F287")
                                     .setTitle('Account generated seccessfully!')
                                     .setDescription(`Check your private ${message.author}! *If you do not recieved the message, please unlock your private!*`)
                                     .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
@@ -121,7 +109,7 @@ module.exports = {
                                 // Set cooldown time
                                 setTimeout(() => {
                                     generated.delete(message.author.id); // Remove the user from the cooldown set after expire
-                                }, config.genCooldown);
+                                }, 5000);
 
                                 if (error) return log.error(error); // If an error occured, log to console
                             });
@@ -129,7 +117,7 @@ module.exports = {
                             // If the service is empty
                             return message.channel.send(
                                 new MessageEmbed()
-                                .setColor(config.color.red)
+                                .setColor("0x57F287")
                                 .setTitle('Generator error!')
                                 .setDescription(`The \`${args[0]}\` service is empty!`)
                                 .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
@@ -140,7 +128,7 @@ module.exports = {
                         // If the service does not exists
                         return message.channel.send(
                             new MessageEmbed()
-                            .setColor(config.color.red)
+                            .setColor("0x57F287")
                             .setTitle('Generator error!')
                             .setDescription(`Service \`${args[0]}\` does not exist!`)
                             .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
@@ -153,9 +141,9 @@ module.exports = {
             // If the command executed in another channel
             message.channel.send(
                 new MessageEmbed()
-                .setColor(config.color.red)
+                .setColor("0x57F287")
                 .setTitle('Wrong command usage!')
-                .setDescription(`You cannot use the \`gen\` command in this channel! Try it in <#${config.genChannel}>!`)
+                .setDescription(`You cannot use the \`gen\` command in this channel! Try it in <#977916010692763668>!`)
                 .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
                 .setTimestamp()
             );

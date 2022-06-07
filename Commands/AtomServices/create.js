@@ -1,7 +1,6 @@
 // Dependencies
 const { MessageEmbed, Message } = require('discord.js');
 const fs = require('fs');
-const config = require('../config.json');
 const CatLoggr = require('cat-loggr');
 
 // Functions
@@ -24,7 +23,7 @@ module.exports = {
         if (!service) {
             return message.channel.send(
                 new MessageEmbed()
-                .setColor(config.color.red)
+                .setColor("0x57F287")
                 .setTitle('Missing parameters!')
                 .setDescription('You need to give a service name!')
                 .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true, size: 64 }))
@@ -41,7 +40,7 @@ module.exports = {
 
             message.channel.send(
                 new MessageEmbed()
-                .setColor(config.color.green)
+                .setColor("0x57F287")
                 .setTitle('Service created!')
                 .setDescription(`New ${args[0]} service created!`)
                 .setFooter(message.author.tag, message.author.displayAvatarURL())
