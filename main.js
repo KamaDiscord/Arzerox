@@ -8,7 +8,6 @@ const log = new CatLoggr();
 //Client dependecies
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
-client.userSettings = new Discord.Collection();
 
 
 ['command_handler', 'event_handler'].forEach(handler =>{
