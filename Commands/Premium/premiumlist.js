@@ -1,6 +1,4 @@
 const { Command } = require("reconlx");
-const ee = require("../../settings/embed.json");
-const config = require("../../settings/config.json");
 const User = require("../../Models/User");
 const moment = require("moment");
 const { Collection, MessageEmbed } = require("discord.js");

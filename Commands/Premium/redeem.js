@@ -1,6 +1,4 @@
 const { Command } = require("reconlx");
-const ee = require("../../settings/embed.json");
-const config = require("../../settings/config.json");
 const moment = require("moment");
 const schema = require("../../Models/code");
 const User = require("../../Models/User");

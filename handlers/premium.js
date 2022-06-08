@@ -19,7 +19,7 @@ module.exports = async (client) => {
 
             // Save the updated user within the usersSettings.
             const newUser = await user.save({ new: true }).catch(() => {});
-            client.usersSettings.set(newUser.Id, newUser);
+            client.userSettings.set(newUser.Id, newUser);
           }
         }
       }
