@@ -12,8 +12,3 @@ Run the ```
 ## Remaster the code
 
 Firstly, clone this repo. Then you will want to download the .zip with the files, extract and open the folder in [VSCode](https://code.visualstudio.com/). Now if you are on the [public repo](https://github.com/KamaDiscord/arzerox-public), you can just change the few settings that require [.env](#install-env), otherwise on the [private one](https://github.com/KamaDiscord/arzerox), you can modify as you wish, but you won't have access to private commands such as the [+gen](#atom-services) 
-
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
