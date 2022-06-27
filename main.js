@@ -1,6 +1,7 @@
+const { Client, Intents } = require('discord.js');
 const Discord = require('discord.js');
 require('dotenv').config();
-const client = new Discord.Client();
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const { Collection } = require('discord.js')
 const mongoose = require('mongoose');
 const CatLoggr = require('cat-loggr');
