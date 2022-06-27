@@ -1,6 +1,6 @@
 const { Command } = require("reconlx");
 const moment = require("moment");
-const schema = require("../../Models/code");
+const schema = require("../../models/code");
 const User = require("../../Models/User");
 
 module.exports = new Command({
