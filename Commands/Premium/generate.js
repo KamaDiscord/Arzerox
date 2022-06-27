@@ -1,7 +1,7 @@
 const { Command } = require("reconlx");
 const moment = require("moment");
 const voucher_codes = require("voucher-code-generator");
-const schema = require("../../Models/code");
+const schema = require("../../models/code");
 
 module.exports = new Command({
   // options
