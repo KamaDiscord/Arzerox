@@ -1,9 +1,6 @@
 const { Client, Discord, GatewayIntentBits, IntentsBitField } = require('discord.js');
 require('dotenv').config();
-const client = new Client(
-{
-	intents: 
-});
+const client = new Client();
 const { Collection } = require('discord.js')
 const mongoose = require('mongoose');
 const CatLoggr = require('cat-loggr');
