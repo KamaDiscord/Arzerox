@@ -1,15 +1,8 @@
 const { Client, Discord, GatewayIntentBits, IntentsBitField } = require('discord.js');
 require('dotenv').config();
-const myIntents = new IntentsBitField();
-myIntents.add(IntentsBitField.Flags.GuildPresences, IntentsBitField.Flags.GuildMembers);
 const client = new Client(
 {
-	intents: [
-		GatewayIntentBits.Guilds,
-		GatewayIntentBits.GuildMessages,
-		GatewayIntentBits.MessageContent,
-		GatewayIntentBits.GuildMembers,
-	],
+	intents: ()
 });
 const { Collection } = require('discord.js')
 const mongoose = require('mongoose');
