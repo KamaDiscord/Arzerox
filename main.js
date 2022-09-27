@@ -2,7 +2,7 @@ const { Client, Discord, GatewayIntentBits, IntentsBitField } = require('discord
 require('dotenv').config();
 const client = new Client(
 {
-	intents: ()
+	intents: ();
 });
 const { Collection } = require('discord.js')
 const mongoose = require('mongoose');
