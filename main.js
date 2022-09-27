@@ -1,4 +1,4 @@
-const { Client, Discord, IntentsBitField } = require('discord.js');
+const Discord = require('discord.js');
 require('dotenv').config();
 const GatewayIntentBits = require('discord.js');
 const client = new Discord.Client({
