@@ -1,7 +1,7 @@
 const client = require("../../main.js");
 const User = require("../../models/User");
 
-client.on("ready", async () => {
+client.on("ready", () => {
   console.log(`${client.user.username} Is Online`);
   client.user.setActivity({
     name: `+help ● Dev by Kama#4725`,
