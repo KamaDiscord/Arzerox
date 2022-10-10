@@ -10,10 +10,10 @@ const User = require("../../models/User");
 //  });
 
   // code
-  const users = await User.find();
-  for (let user of users) {
-    client.userSettings.set(user.Id, user);
-  }
+//  const users = await User.find();
+//  for (let user of users) {
+//    client.userSettings.set(user.Id, user);
+//  }
 
-  require('../handlers/premium')(client)
-});
+//  require('../handlers/premium')(client)
+//});
