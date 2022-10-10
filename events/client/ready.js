@@ -21,14 +21,3 @@ module.exports = {
     
 	},
 };
-
-
-
-  // code
-//  const users = await User.find();
-//  for (let user of users) {
-//    client.userSettings.set(user.Id, user);
-//  }
-
-//  require('../handlers/premium')(client)
-//});
