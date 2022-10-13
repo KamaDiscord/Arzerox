@@ -6,18 +6,18 @@ module.exports = {
 	once: true,
 	execute(client) {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
-    client.user.setActivity({
-    name: `+help ● Dev by Kama#4725`,
-    type: "WATCHING",
-    url:"https://twitch.tv/lordkama_fr",
-  });
-    const users = await User.find();
-  for (let user of users) {
-    client.userSettings.set(user.Id, user);
-  }
+		client.user.setActivity({
+		    name: `+help ● Dev by Kama#4725`,
+		    type: "WATCHING",
+		    url:"https://twitch.tv/lordkama_fr",
+		});
+		const users = User.find();
+		for (let user of users) {
+			client.userSettings.set(user.Id, user);
+		}
 
-  require('../handlers/premium')(client)
-});
-    
+		require('../handlers/premium')(client)
+		});
+
 	},
 };
