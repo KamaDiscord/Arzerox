@@ -17,7 +17,7 @@ module.exports = {
 		}
 
 		require('../handlers/premium')(client)
-		}
+		
 
 	},
 };
