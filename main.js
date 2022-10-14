@@ -14,7 +14,7 @@ client.userSettings = new Discord.Collection();
 
 
 ['command_handler', 'event_handler'].forEach(handler =>{
-    require(`./handlers/${handler}`)(client, message, Discord);
+    require(`./handlers/${handler}`)(client, Discord);
 });
 
 // For ticket system
