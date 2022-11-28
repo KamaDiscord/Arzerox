@@ -13,9 +13,9 @@ module.exports = (Discord, client, message) =>{
     let user = client.userSettings.get(interaction.user.id);
     // If there is no user, create it in the Database as "newUser"
     if (!user) {
-      const findUser = User.findOne({ Id: interaction.user.id });
+      const findUser = await User.findOne({ Id: interaction.user.id });
       if (!findUser) {
-        const newUser = User.create({ Id: interaction.user.id });
+        const newUser = await User.create({ Id: interaction.user.id });
         client.userSettings.set(interaction.user.id, newUser);
         user = newUser;
       } else return;
