@@ -1,6 +1,6 @@
-const { GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits } = require('discord.js');
 const Discord = require('discord.js');
-const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
+const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 require('dotenv').config();
 const { Collection } = require('discord.js')
 const mongoose = require('mongoose');
