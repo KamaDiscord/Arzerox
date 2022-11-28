@@ -1,6 +1,6 @@
 require('dotenv').config();
 const Discord = require('discord.js')
-module.exports = (Discord, client, message) async =>{
+module.exports = async (Discord, client, message)  =>{
     const prefix = process.env.PREFIX;
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
