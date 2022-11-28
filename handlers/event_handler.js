@@ -9,7 +9,8 @@ module.exports = (Discord, client) => {
                 const event = require(`../events/${dirs}/${file}`);
                 const event_name = file.split('.')[0];
                 if (typeof event?.bind === 'function');
-                client.on(event_name, event.bind(null, Discord, client))
+                let test = event.bind(null, Discord, client)
+                client.on(event_name, test)
             }
         }
 
