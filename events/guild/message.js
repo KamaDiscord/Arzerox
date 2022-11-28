@@ -28,4 +28,5 @@ module.exports = (Discord, client, message) =>{
         }
         }
     }
+    init{};
 }
