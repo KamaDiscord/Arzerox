@@ -8,7 +8,7 @@ module.exports = async (Discord, client, message)  =>{
  
     const args = message.content.slice(prefix.length).trim().split(/  +/g);
     const command = args.shift().toLowerCase();
-    const cmd = client.commands.get(command, interaction.commandName);
+    const cmd = client.commands.get(command, client.interaction.commandName);
  
     const User = require("../Models/User");
     if (cmd) {
