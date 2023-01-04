@@ -1,3 +1,8 @@
+#NOTE
+
+Hi. This is the creator of the repo, Kama. This bot works in discord.js v12 environement and partly in v13. You can only use prefix commands with it and they are not working in v13 or v14. If you want to use the bot you can follow the instructions underneath.
+
+
 # Arzerox
 Arzerox  is a bot developped by Kama#4725 in association with Cheater140#0037 .
 You can remaster the code if you want to but you will not be able to just use it in your server if you don't know some proper things. [Check this part to know how](#remaster-the-code), else head [here](#how-to-add-to-your-server) for setup.
